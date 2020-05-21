@@ -28,12 +28,10 @@
  			$(document).ready(function(){ 
 				mymap = L.map('mapid').setView([53.38207,-1.48423], 15);
 
-				L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGlja2NoZXN0ZXJ3b29kIiwiYSI6ImNqNG9kcHI2aDJtN2wzMnBndmU3bWkzdmgifQ.rdSmry2jgNl4jmydiypisQ', {
-    				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    				maxZoom: 18,
-				    id: 'mapbox.streets',
-    				accessToken: 'your.mapbox.access.token'
-				}).addTo(mymap);
+	            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	            maxZoom: 18
+	            }).addTo(mymap);
 							
 			    /*<![CDATA[*/		
 			    var vehicles = [[${vehicles}]];
